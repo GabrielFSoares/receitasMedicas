@@ -1,0 +1,7 @@
+{
+  "name": "Receitas Medicas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
