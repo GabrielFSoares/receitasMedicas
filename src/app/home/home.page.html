@@ -1,20 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <div class="row justify-content-center">
+      <ion-img src="assets/icon_guia_medico.png" class="logo mt-5 pt-5"></ion-img>
+      <p class="text-center mt-3">Ola, {{nome}}</p>
+    </div>
   </div>
+
+  <div class="row justify-content-center m-5">
+    <button class="col-12 bg-white rounded-3 funcao shadow row justify-content-center"> 
+      <ion-img src="assets/icones/formulario-de-contato.png" class="icones mt-4 mb-2"></ion-img>
+      <p class="text-center">Gerar Receita</p>
+    </button>
+
+    
+    <div class="d-flex justify-content-between mt-4">
+      <button class="col-6 bg-white rounded-3 funcao shadow row justify-content-center">
+        <ion-img src="assets/icones/do-utilizador.png" class="icones mt-4 mb-2"></ion-img>
+        <p class="text-center">Seus dados</p>
+      </button>
+
+      <button class="col-6 bg-white rounded-3 funcao shadow row justify-content-center ml-5"> 
+        <ion-img src="assets/icones/definicoes.png" class="icones mt-4 mb-2"></ion-img>
+        <p class="text-center">Ajustes</p>
+      </button>
+    </div>
+    
+    <button id="sair" class="w-50 text-center text-danger"><fa-icon class="fa-lg text-danger" [icon]="faSignOut"></fa-icon> Sair</button>
+  </div>
+  
 </ion-content>
