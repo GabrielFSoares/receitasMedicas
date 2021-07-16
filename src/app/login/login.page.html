@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <div>
+    <div class="row justify-content-center">
+      <ion-img src="assets/icon_guia_medico.png" class="logo mt-5 pt-5"></ion-img>
+    </div>
+  </div>
 
+  <div class="row jusrify-content-center m-5">
+    <form class="mt-5">
+      <div class="form-floating mb-5">
+        <input id="login" class="form-control" type="email" [(NgModel)]="email" placeholder="name@example.com">
+        <label for="login">Email</label>
+      </div>
+
+      <div class="form-floating mb-5">
+        <input id="password" class="form-control" type="password" [(NgModel)]="password" placeholder="Senha">
+        <label for="password">Senha</label>
+      </div>
+      
+      <button type="submit" class="btn btn-outline-success">Entrar</button>
+    </form>
+  </div>
+  
 </ion-content>
