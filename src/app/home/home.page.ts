@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faSignOutAlt, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -13,6 +14,11 @@ export class HomePage {
 
   nome:String = "Gabriel"
 
-  constructor() {}
+  constructor(public router:Router) {}
+
+  logout() {
+    this.router.navigate(['/login'])
+    localStorage.setItem("login", '0')
+  }
 
 }

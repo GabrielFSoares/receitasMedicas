@@ -2,24 +2,54 @@
 <ion-content [fullscreen]="true">
   <div>
     <div class="row justify-content-center">
-      <ion-img src="assets/icon_guia_medico.png" class="logo mt-5 pt-5"></ion-img>
+      <ion-img src="assets/icon_guia_medico.png" class="logo my-5 pt-5"></ion-img>
     </div>
   </div>
 
-  <div class="row jusrify-content-center m-5">
-    <form class="mt-5">
-      <div class="form-floating mb-5">
-        <input id="login" class="form-control" type="email" [(NgModel)]="email" placeholder="name@example.com">
-        <label for="login">Email</label>
-      </div>
+  <div class="d-flex justify-content-center mt-5">
+    <a class="col-4 p-active text-center" id="l" (click)="modNav('l')"><p>LOGIN</p></a>
+    <a class="col-4 text-center p text-center" id="c" (click)="modNav('c')"><p>CADASTRAR</p></a>
+  </div>
 
-      <div class="form-floating mb-5">
-        <input id="password" class="form-control" type="password" [(NgModel)]="password" placeholder="Senha">
-        <label for="password">Senha</label>
-      </div>
-      
-      <button type="submit" class="btn btn-outline-success">Entrar</button>
-    </form>
+  <div id="login">
+    <div class="d-flex flex-column align-items-center mx-5 animate__animated animate__fadeInLeft">
+      <form>
+        <ion-item class="ion-margin">
+          <ion-label position="floating" color="dark">E-mail</ion-label>
+          <ion-input name="login" type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin">
+          <ion-label position="floating" color="dark">Senha</ion-label>
+          <ion-input name="password" type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+        <ion-button class="mt-4" type="button" color="success" expand="block" (click)="loginUser()" fill="outline">Login</ion-button>
+      </form>
+      <ion-label class="ion-margin mt-3"><p><a [routerLink]="['/cadastrar']">Esqueceu a senha?</a></p></ion-label>
+    </div>
+  </div>
+
+  <div id="create" class="d-none">
+    <div class="d-flex flex-column align-items-center mx-5 animate__animated animate__fadeInRight">
+      <form>
+        <ion-item class="ion-margin">
+          <ion-label position="floating" color="dark">E-mail</ion-label>
+          <ion-input name="login" type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin">
+          <ion-label position="floating" color="dark">Senha</ion-label>
+          <ion-input name="password" type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin">
+          <ion-label position="floating" color="dark">Digite a senha novamente</ion-label>
+          <ion-input name="password" type="password" [(ngModel)]="password2"></ion-input>
+        </ion-item>
+
+        <ion-button class="mt-4" type="button" color="success" expand="block" (click)="createUser()" fill="outline">Cadastrar</ion-button>
+      </form>
+    </div>
   </div>
   
 </ion-content>

@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   constructor(public router:Router) {
-    let login = false
+    let login = localStorage.getItem("login")
 
-    if(login) {
+    if(login == "1") {
       this.router.navigate(['/home']);
     } else {
       this.router.navigate(['/login']);
