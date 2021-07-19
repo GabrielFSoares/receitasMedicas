@@ -11,7 +11,7 @@ export class AppComponent {
     let login = localStorage.getItem("login")
 
     if(login == "1") {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/gerar-receita']);
     } else {
       this.router.navigate(['/login']);
     }
