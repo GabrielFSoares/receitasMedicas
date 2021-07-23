@@ -9,7 +9,20 @@
 
     <ion-label color="dark">Nome do Paciente</ion-label>
     <ion-item class="mb-5">
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
+      <ion-input type="text" [(ngModel)]="patientName"></ion-input>
     </ion-item>
+
+    <ion-label color="dark">Diagnostico</ion-label>
+    <ion-list>
+      <ion-item class="mb-5">
+        <ion-select placeholder="Selecione o diagnostico">
+          <ion-select-option *ngFor="let patologia of diagnostico" [value]="patologia">{{patologia.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-label color="dark">Medicamento</ion-label>
+      <ion-item>
+        <ion-input type="text">{{diagnostico[0].opcoes[0].medicacao}}</ion-input>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
