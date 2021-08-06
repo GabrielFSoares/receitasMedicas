@@ -2,27 +2,47 @@
   <div class="m-5">
     <h6 class="mb-5">Gerar Receita</h6>
 
-    <ion-label color="dark">Diagnostico</ion-label>
-    <ion-item class="mb-5">
-      <ion-input type="text" [(ngModel)]="email"></ion-input>
-    </ion-item>
-
     <ion-label color="dark">Nome do Paciente</ion-label>
     <ion-item class="mb-5">
-      <ion-input type="text" [(ngModel)]="patientName"></ion-input>
+      <ion-input type="text" id="nome" [(ngModel)]="patientName"></ion-input>
     </ion-item>
 
-    <ion-label color="dark">Diagnostico</ion-label>
+    <ion-label color="dark">Diagnóstico</ion-label>
     <ion-list>
       <ion-item class="mb-5">
-        <ion-select placeholder="Selecione o diagnostico">
-          <ion-select-option *ngFor="let patologia of diagnostico" [value]="patologia">{{patologia.name}}</ion-select-option>
+        <ion-select id="patologia" placeholder="Selecione o diagnostico" interface="action-sheet" (ionChange)="selectDiag()">
+          <ion-select-option *ngFor="let patologia of diagnostico; let i = index" [value]="i">{{patologia.name}}</ion-select-option>
         </ion-select>
       </ion-item>
+
       <ion-label color="dark">Medicamento</ion-label>
-      <ion-item>
-        <ion-input type="text">{{diagnostico[0].opcoes[0].medicacao}}</ion-input>
+      <ion-item class="mb-5">
+        <ion-select id="medicamento" placeholder="Selecione a medicação" interface="action-sheet" (ionChange)="selectMed()">
+
+        </ion-select>     
       </ion-item>
     </ion-list>
+
+    <ion-label color="dark">Apresentação</ion-label>
+      <ion-item class="mb-5">
+        <ion-input id="apresentacao" type="text" [(ngModel)]="apresentacao" disabled></ion-input>
+      </ion-item>
+      
+      <ion-label color="dark">Posologia</ion-label>
+      <ion-item class="mb-5">
+        <ion-input id="posologia" type="text" [(ngModel)]="posologia" disabled></ion-input>
+      </ion-item>
+
+      <ion-label color="dark">Via</ion-label>
+      <ion-item class="mb-5">
+        <ion-input id="via" type="text" [(ngModel)]="via" disabled></ion-input>
+      </ion-item>
+
+      <ion-label color="dark">Tempo de tratamento</ion-label>
+      <ion-item class="mb-5">
+        <ion-input id="tempo" type="text" [(ngModel)]="time" disabled></ion-input>
+      </ion-item>
+
+      <ion-button class="mt-4" type="button" color="success" expand="block" (click)="generate()" fill="outline">Gerar Receita</ion-button>
   </div>
 </ion-content>
