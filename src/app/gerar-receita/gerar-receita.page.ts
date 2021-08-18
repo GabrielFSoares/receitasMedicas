@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController, Platform } from '@ionic/angular';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { Filesystem, Directory } from '@capacitor/filesystem';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -17,6 +18,8 @@ interface Patologia {
   styleUrls: ['./gerar-receita.page.scss'],
 })
 export class GerarReceitaPage implements OnInit {
+
+  faAngleLeft = faAngleLeft
 
   medicacao:string
   pdf = null

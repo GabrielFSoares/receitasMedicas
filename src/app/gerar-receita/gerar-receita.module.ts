@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { GerarReceitaPageRoutingModule } from './gerar-receita-routing.module';
 
 import { GerarReceitaPage } from './gerar-receita.page';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GerarReceitaPageRoutingModule
+    GerarReceitaPageRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [GerarReceitaPage]
 })

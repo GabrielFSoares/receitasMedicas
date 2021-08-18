@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { faSignOutAlt, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,6 @@ import { faSignOutAlt, faDownload } from '@fortawesome/free-solid-svg-icons';
 export class HomePage {
 
   faSignOut = faSignOutAlt
-  faDownload = faDownload
 
   nome:String = "Gabriel"
 

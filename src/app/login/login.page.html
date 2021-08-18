@@ -37,14 +37,21 @@
           <ion-label position="floating" color="dark">E-mail</ion-label>
           <ion-input name="login" type="text" [(ngModel)]="email"></ion-input>
         </ion-item>
-
+        <ion-item class="ion-margin">
+          <ion-label position="floating" color="dark">Nome completo</ion-label>
+          <ion-input name="" type="text" [(ngModel)]="sss"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin">
+          <ion-label position="floating" color="dark">CRM</ion-label>
+          <ion-input name="" type="text" [(ngModel)]="ddd"></ion-input>
+        </ion-item>
         <ion-item class="ion-margin">
           <ion-label position="floating" color="dark">Senha</ion-label>
           <ion-input name="password" type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
         <ion-item class="ion-margin">
           <ion-label position="floating" color="dark">Digite a senha novamente</ion-label>
-          <ion-input name="password" type="password" [(ngModel)]="password2"></ion-input>
+          <ion-input name="password2" type="password" [(ngModel)]="password2"></ion-input>
         </ion-item>
 
         <ion-button class="mt-4" type="button" color="success" expand="block" (click)="createUser()" fill="outline">Cadastrar</ion-button>
