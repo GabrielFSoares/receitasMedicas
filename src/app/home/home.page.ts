@@ -18,6 +18,7 @@ export class HomePage {
   logout() {
     this.router.navigate(['/login'])
     localStorage.setItem("login", '0')
+    localStorage.removeItem("token")
   }
 
 }
